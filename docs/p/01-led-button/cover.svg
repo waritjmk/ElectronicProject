@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A4E70" stroke-opacity=".35"/></pattern>
+  <radialGradient id="h"><stop offset="0" stop-color="#F2E3B6" stop-opacity=".9"/><stop offset="1" stop-color="#F2E3B6" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1280" height="720" fill="#0B1220"/><rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="860" cy="360" r="190" fill="url(#h)" opacity=".5"/>
+  <g fill="none" stroke="#F2E3B6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M240 360H400M520 360H760M960 360H1060"/>
+    <circle cx="410" cy="360" r="14"/><circle cx="510" cy="360" r="14"/><path d="M400 310H520M460 310V270"/>
+    <path d="M800 290V430L920 360Z" fill="#F2E3B6"/><path d="M920 290V430"/>
+  </g>
+  <text x="240" y="600" fill="#A9B4C6" font-family="Consolas, monospace" font-size="34" letter-spacing="3">ARDUINO · BUTTON → LED</text>
+</svg>

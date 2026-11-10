@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="Consolas, 'Courier New', monospace" font-size="18">
+  <rect width="900" height="460" fill="#fff"/>
+  <g fill="none" stroke="#0B1220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="40" y="60" width="220" height="340" rx="10" fill="#EEF2F7"/>
+    <!-- 5V -> button -> node -->
+    <path d="M260 120H500M620 120H740V200"/>
+    <circle cx="508" cy="120" r="8" fill="#fff"/><circle cx="612" cy="120" r="8" fill="#fff"/>
+    <path d="M500 98H620M560 98V74"/>
+    <!-- node -> D2 -->
+    <path d="M740 200H260"/>
+    <!-- node -> 10k -> GND -->
+    <path d="M740 200V230M740 310V360"/>
+    <rect x="724" y="230" width="32" height="80" fill="#fff"/>
+    <!-- D13 -> 220 -> LED -> GND -->
+    <path d="M260 280H330M410 280H470M510 280H600V360"/>
+    <rect x="330" y="264" width="80" height="32" fill="#fff"/>
+    <path d="M470 258V302L510 280Z" fill="#F2E3B6"/><path d="M510 258V302"/>
+    <path d="M492 246l14-16M506 230l-9 2M506 230l-2 9M512 252l14-16M526 236l-9 2M526 236l-2 9" stroke-width="2"/>
+    <!-- GND rail -->
+    <path d="M260 360H740"/>
+  </g>
+  <g fill="#0B1220"><circle cx="740" cy="200" r="6"/><circle cx="600" cy="360" r="6"/></g>
+  <g fill="#0B1220">
+    <text x="60" y="96" font-weight="bold">Arduino UNO</text>
+    <text x="196" y="126">5V</text><text x="208" y="206">D2</text><text x="196" y="286">D13</text><text x="196" y="366">GND</text>
+    <text x="528" y="62">BUTTON</text>
+    <text x="766" y="276">10k</text>
+    <text x="346" y="250">220</text>
+    <text x="474" y="326">LED</text>
+  </g>
+</svg>

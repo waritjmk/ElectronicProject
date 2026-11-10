@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A4E70" stroke-opacity=".35"/></pattern>
+  <radialGradient id="h"><stop offset="0" stop-color="#F2E3B6" stop-opacity=".9"/><stop offset="1" stop-color="#F2E3B6" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1280" height="720" fill="#0B1220"/><rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="960" cy="340" r="180" fill="url(#h)" opacity=".5"/>
+  <g fill="none" stroke="#F2E3B6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="250" y="200" width="150" height="280" rx="20"/><path d="M305 440H345"/>
+    <path d="M470 340H700" stroke-dasharray="6 22"/>
+    <path d="M520 270a90 90 0 0 1 130 0M548 300a52 52 0 0 1 74 0"/>
+    <rect x="740" y="250" width="110" height="180" rx="10"/>
+    <path d="M900 280V400L1010 340Z" fill="#F2E3B6"/><path d="M1010 280V400"/>
+  </g>
+  <text x="250" y="600" fill="#A9B4C6" font-family="Consolas, monospace" font-size="34" letter-spacing="3">ESP32 · PHONE → WI-FI → LED</text>
+</svg>

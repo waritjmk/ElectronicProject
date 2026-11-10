@@ -7,5 +7,6 @@
   "license": "[TODO: เงื่อนไขการนำโค้ดไปใช้ เช่น ใช้ได้ฟรี ให้เครดิต EasyEngineer]",
   "url": "https://waritjmk.github.io/ElectronicProject",
   "repo": "https://github.com/waritjmk/ElectronicProject",
-  "home": "https://waritjmk.github.io/EasyEngineer/"
+  "home": "https://waritjmk.github.io/EasyEngineer/",
+  "demoNote": "โปรเจกต์นี้ทำขึ้นเพื่อทดลองหน้าเว็บ โค้ดเขียนตามวิธีมาตรฐานแต่ยังไม่ได้ทดสอบบนบอร์ดจริง และยังไม่มีคลิปประกอบ"
 }

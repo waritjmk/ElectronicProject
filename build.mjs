@@ -106,6 +106,7 @@ for (const slug of slugs) {
   if (yt || p.tiktok) blocks.push(sec("video", num(), "คลิป", `
     ${yt ? `<a class="yt" href="https://www.youtube.com/watch?v=${yt}" data-yt="${yt}" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/${yt}/hqdefault.jpg" width="480" height="360" loading="lazy" alt="ภาพตัวอย่างคลิป ${esc(p.title)} บน YouTube"><span class="yt__play" aria-hidden="true"></span><span class="vh">เล่นคลิปบน YouTube</span></a>` : ""}
     <div class="btns">${yt ? `<a class="btn" href="https://www.youtube.com/watch?v=${yt}" target="_blank" rel="noopener">ดูบน YouTube${NEW}</a>` : ""}${p.tiktok ? `<a class="btn" href="${esc(p.tiktok)}" target="_blank" rel="noopener">ดูบน TikTok${NEW}</a>` : ""}</div>`));
+  else if (p.youtube === "TODO") blocks.push(sec("video", num(), "คลิป", `<div class="placeholder">${t("[TODO: ลิงก์คลิป YouTube / TikTok ของโปรเจกต์นี้]")}</div>`));
   if (p.parts.length) blocks.push(sec("parts", num(), "อุปกรณ์ที่ใช้", `
     <div class="tablewrap"><table><thead><tr><th scope="col">อุปกรณ์</th><th scope="col">จำนวน</th><th scope="col">หมายเหตุ</th></tr></thead><tbody>
     ${p.parts.map((x) => `<tr><th scope="row">${x.link ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${t(x.name)}${NEW}</a>` : t(x.name)}</th><td>${t(x.qty ?? "")}</td><td>${t(x.note ?? "")}</td></tr>`).join("")}
@@ -131,7 +132,7 @@ for (const slug of slugs) {
       <div class="btns">${dl}${blocks.length > 1 ? `<a class="btn" href="#${yt || p.tiktok ? "video" : "code"}">ดูรายละเอียด</a>` : ""}</div>
     </div>
   </div>
-  <div class="wrap">${blocks.join("\n")}</div>
+  <div class="wrap">${p.demo ? `<p class="notice"><strong>หน้าตัวอย่าง</strong> ${t(site.demoNote)}</p>` : ""}${blocks.join("\n")}</div>
 </main>
 ${foot}`);
   projects.push(p);
@@ -143,7 +144,7 @@ const cats = [...new Set(projects.map((p) => p.category || "โปรเจก�
 const card = (p) => `<a class="card" href="p/${esc(p.slug)}/">
   <div class="thumb">${p.cover ? `<img src="p/${esc(p.slug)}/${esc(p.cover)}" loading="lazy" alt="">` : `<span class="mono">${esc(p.slug)}</span>`}</div>
   <div class="card__body"><h3>${t(p.title)}</h3><p>${t(p.desc)}</p>
-  <ul class="tags">${[ytId(p.youtube) || p.tiktok ? "คลิป" : "", p.wiring?.image || p.wiring?.pins?.length ? "Wiring" : "", "Source code"].filter(Boolean).concat(p.tags).map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+  <ul class="tags">${[p.demo ? "ตัวอย่าง" : "", ytId(p.youtube) || p.tiktok ? "คลิป" : "", p.wiring?.image || p.wiring?.pins?.length ? "Wiring" : "", "Source code"].filter(Boolean).concat(p.tags).map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
 </a>`;
 const index = `${head(site.title, site.description, "./", "")}
 <main id="main" class="wrap home">
