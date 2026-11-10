@@ -1,6 +1,40 @@
 {
   "title": "ชื่อโปรเจกต์",
-  "desc": "อธิบายสั้นๆ ว่าโค้ดนี้ทำอะไร ใช้บอร์ดอะไร",
-  "tags": ["Arduino"],
-  "video": ""
+  "desc": "อธิบายสั้นๆ ว่าโปรเจกต์นี้ทำอะไร",
+  "category": "Arduino",
+  "tags": [
+    "Arduino UNO"
+  ],
+  "cover": "cover.jpg",
+  "youtube": "",
+  "tiktok": "",
+  "parts": [
+    {
+      "name": "Arduino UNO",
+      "qty": "1",
+      "note": "",
+      "link": ""
+    }
+  ],
+  "wiring": {
+    "image": "wiring.png",
+    "pins": [
+      [
+        "ขา 13",
+        "LED ขาบวก (ผ่านตัวต้านทาน 220Ω)"
+      ],
+      [
+        "GND",
+        "LED ขาลบ"
+      ]
+    ],
+    "note": ""
+  },
+  "code": {
+    "main": "main.ino"
+  },
+  "steps": [
+    "ต่อวงจรตามผัง",
+    "เปิดไฟล์โค้ดด้วย Arduino IDE แล้วกด Upload"
+  ]
 }
