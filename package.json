@@ -1,0 +1,6 @@
+{
+  "name": "easyengineer-code",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" }
+}
