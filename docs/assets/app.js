@@ -8,7 +8,7 @@
       f.title = "YouTube video player";
       f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       f.allowFullscreen = true;
-      f.className = "yt";
+      f.className = a.className;
       a.replaceWith(f);
       f.focus();
     });

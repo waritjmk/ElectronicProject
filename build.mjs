@@ -89,7 +89,8 @@ for (const slug of slugs) {
   const wiring = p.wiring || {};
   wiring.image = img(wiring.image);
   const yt = ytId(p.youtube);
-  if (p.youtube && !yt) console.warn(`${slug}: could not read a YouTube id from "${p.youtube}"`);
+  const tall = /\/shorts\//.test(p.youtube || ""); // Shorts are vertical (9:16)
+  if (p.youtube && p.youtube !== "TODO" && !yt) console.warn(`${slug}: could not read a YouTube id from "${p.youtube}"`);
 
   let code = "";
   if (p.code?.main) {
@@ -104,7 +105,7 @@ for (const slug of slugs) {
   const num = () => String(++n).padStart(2, "0");
   const blocks = [];
   if (yt || p.tiktok) blocks.push(sec("video", num(), "คลิป", `
-    ${yt ? `<a class="yt" href="https://www.youtube.com/watch?v=${yt}" data-yt="${yt}" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/${yt}/hqdefault.jpg" width="480" height="360" loading="lazy" alt="ภาพตัวอย่างคลิป ${esc(p.title)} บน YouTube"><span class="yt__play" aria-hidden="true"></span><span class="vh">เล่นคลิปบน YouTube</span></a>` : ""}
+    ${yt ? `<a class="yt${tall ? " yt--tall" : ""}" href="https://www.youtube.com/watch?v=${yt}" data-yt="${yt}" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/${yt}/${tall ? "oar2" : "hqdefault"}.jpg" width="${tall ? 405 : 480}" height="${tall ? 720 : 360}" loading="lazy" alt="ภาพตัวอย่างคลิป ${esc(p.title)} บน YouTube"><span class="yt__play" aria-hidden="true"></span><span class="vh">เล่นคลิปบน YouTube</span></a>` : ""}
     <div class="btns">${yt ? `<a class="btn" href="https://www.youtube.com/watch?v=${yt}" target="_blank" rel="noopener">ดูบน YouTube${NEW}</a>` : ""}${p.tiktok ? `<a class="btn" href="${esc(p.tiktok)}" target="_blank" rel="noopener">ดูบน TikTok${NEW}</a>` : ""}</div>`));
   else if (p.youtube === "TODO") blocks.push(sec("video", num(), "คลิป", `<div class="placeholder">${t("[TODO: ลิงก์คลิป YouTube / TikTok ของโปรเจกต์นี้]")}</div>`));
   if (p.parts.length) blocks.push(sec("parts", num(), "อุปกรณ์ที่ใช้", `
