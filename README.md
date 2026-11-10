@@ -1,6 +1,6 @@
 # EasyEngineer Code
 
-โค้ดจากคลิปและโปรเจกต์ของ EasyEngineer ดาวน์โหลดฟรีที่ https://waritjmk.github.io/EasyEngineer-Code/
+โค้ดจากคลิปและโปรเจกต์ของ EasyEngineer ดาวน์โหลดฟรีที่ https://waritjmk.github.io/ElectronicProject/
 
 ## เพิ่มโปรเจกต์ใหม่
 1. คัดลอกโฟลเดอร์ `projects/_template` แล้วตั้งชื่อใหม่เป็นตัวพิมพ์เล็กคั่นด้วยขีด เช่น `projects/01-led-button`
